@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Agro Scan</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+  <div class="container">
+    <h1>🌿 Agro Scan</h1>
+    
+    <form method="POST" action="/predict" enctype="multipart/form-data">
+      <input type="file" name="image" required>
+      <button type="submit">Predict</button>
+    </form>
+
+    {% if prediction %}
+  <div class="result">
+    <p>Prediction: {{ prediction }}</p>
+    <img src="{{ image_path }}" alt="Uploaded image">
+    <form method="POST" action="/know_more">
+      <input type="hidden" name="disease" value="{{ prediction }}">
+      <button type="submit" class="know-more-btn">Know More</button>
+    </form>
+  </div>
+{% endif %}
+  </div>
+</body>
+</html>

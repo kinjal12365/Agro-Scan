@@ -1,0 +1,5 @@
+outs:
+- md5: 48e7f0cedfd11ef015220c04e128563d
+  size: 159662077
+  hash: md5
+  path: plant_model.keras.zip

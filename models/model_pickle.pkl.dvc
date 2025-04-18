@@ -1,0 +1,5 @@
+outs:
+- md5: c52e498d506bbe0cffeb29129ec7be58
+  size: 216302691
+  hash: md5
+  path: model_pickle.pkl
